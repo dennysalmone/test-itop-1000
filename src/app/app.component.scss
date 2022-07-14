@@ -1,0 +1,27 @@
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 2px !important;
+}
+
+::ng-deep.mat-form-field-infix {
+    border-top: none !important;
+}
+
+::ng-deep.mat-form-field-appearance-fill {
+    padding: 0 !important;
+}
+
+::ng-deep.mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+}
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0 !important;
+}
+
+th.table-block {
+    color: black !important;
+}
+
+::ng-deep .mat-select-value-text {
+    color: rgba(0,0,0,.90);
+}

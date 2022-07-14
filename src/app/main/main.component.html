@@ -1,0 +1,31 @@
+<div class="main-container">
+    <div *ngIf="currencyList">
+        <table class="overlay">
+            <tr>
+                <th class="table-block">Currency</th><th class="table-block">Rate</th>
+            </tr>
+            <ng-container *ngFor="let ind of selectedIndex, index as i">
+                <ng-container *ngFor="let currency of currencyList, index as c">
+                    <ng-container *ngIf="checkIndex(c, ind)">
+                        <tr>
+                            <th class="table-block">
+                                <mat-form-field appearance="fill">
+                                    <mat-select (selectionChange)="onSelectChange($event.value, c, i)" required [value]="currencyList[c].name">
+                                        <ng-container *ngFor="let cur of currencyList, index as j">
+                                            <mat-option [disabled]="checkForDisable(c, j)" [value]="cur.name">{{cur.name}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </th>
+                            <input type="number" (change)="onChangeValue($event, currencyList[c])" [value]='+(multIndex * +(currencyList[c].value)).toFixed(4)' class="table-block">
+                        </tr>         
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </table>
+    </div>
+</div>
+
+
+
+
